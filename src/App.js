@@ -79,7 +79,6 @@ class App extends Component {
         <section id="app" style={sectionStyle}>
           <h1 className="middle">
             Learning <span className="bold" style={boldStyle}>Skills</span> .
-					<br />
 					Leading <span className="bold" style={boldStyle}>Profits</span> .
 				</h1>
         </section>
