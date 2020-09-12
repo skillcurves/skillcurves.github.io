@@ -1,5 +1,5 @@
 import React, { Component } /*, { useEffect } */ from 'react';
-// import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import './Banner.scss';
 
