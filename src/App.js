@@ -1,59 +1,27 @@
 import React, { Component } /*, { useEffect } */ from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Blog from './components/Blog';
+import Quotes from './components/Quotes';
+import Contact from './components/Contact';
+import Error from './components/Error';
 import './App.css';
-import './Banner.scss';
 
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      pos: { x: 0, y: 0 },
-      shadow: true,
-      colors: [
-        {
-          "background": "#1c2550",
-          "text": "#ffffff",
-          "bold": "#FCF751"
-        }, {
-          "background": "#1c2550",
-          "text": "#ffffff",
-          "bold": "#FCF751"
-        }],
-      background: null,
-      text: null,
-      bold: null
-    };
-  }
-
-  componentDidMount() {
-    this.RandomBackground();
-  }
-
-  RandomBackground() {
-    let getRandomInt = (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
+      home: true,
+      about: false,
+      blog: false,
+      quotes: false,
+      contact: false
     }
-
-    let RandomID = getRandomInt(0, 1);
-
-    console.log(RandomID);
-
-    this.setState({
-      background: this.state.colors[RandomID].background,
-      text: this.state.colors[RandomID].text,
-      bold: this.state.colors[RandomID].bold
-    })
   }
 
   render() {
-    let sectionStyle = {
-      backgroundColor: this.state.background,
-      color: this.state.text
-    }
-    let boldStyle = {
-      color: this.state.bold
-    }
-
     const hamburger = (event) => {
       let x = document.getElementById("navigationId");
       if (x.className === "navigation") {
@@ -63,26 +31,108 @@ class App extends Component {
       }
     }
 
-    return (
-      <div>
-        <div className="navigation" id="navigationId">
-          <span className="active">Home</span>
-          <span>About Us</span>
-          <span>Blog</span>
-          <span>Quotes Corner</span>
-          <span>Contact</span>
-          <span className="icon" onClick={hamburger}>
-            <i className="fa fa-bars"></i>
-          </span>
-        </div>
+    const activeClass = (event) => {
+      switch (event.currentTarget.id) {
+        case 'home':
+          this.setState({
+            home: true,
+            about: false,
+            blog: false,
+            quotes: false,
+            contact: false
+          });
+          break;
+        case 'about':
+          this.setState({
+            home: false,
+            about: true,
+            blog: false,
+            quotes: false,
+            contact: false
+          });
+          break;
+        case 'blog':
+          this.setState({
+            home: false,
+            about: false,
+            blog: true,
+            quotes: false,
+            contact: false
+          });
+          break;
+        case 'quotes':
+          this.setState({
+            home: false,
+            about: false,
+            blog: false,
+            quotes: true,
+            contact: false
+          });
+          break;
+        case 'contact':
+          this.setState({
+            home: false,
+            about: false,
+            blog: false,
+            quotes: false,
+            contact: true
+          });
+          break;
+        default:
+          this.setState({
+            home: true,
+            about: false,
+            blog: false,
+            quotes: false,
+            contact: false
+          });
+          break;
+      }
+    }
 
-        <section id="app" style={sectionStyle}>
-          <h1 className="middle">
-            Learning <span className="bold" style={boldStyle}>Skills</span> .
-					Leading <span className="bold" style={boldStyle}>Profits</span> .
-				</h1>
-        </section>
-      </div>
+    return (
+      <BrowserRouter>
+        <div>
+          <div className="navigation" id="navigationId">
+            <span className={"nav".concat(" ").concat(this.state.home ? "active" : null)} 
+              onClick={activeClass} 
+              id="home">
+                <Link to="/">Home</Link>
+            </span>
+            <span className={"nav".concat(" ").concat(this.state.about ? "active" : null)} 
+              onClick={activeClass} 
+              id="about">
+                <Link to="/about">About Us</Link>
+            </span>
+            <span className={"nav".concat(" ").concat(this.state.blog ? "active" : null)} 
+              onClick={activeClass} 
+              id="blog">
+                <Link to="/blog">Blog</Link>
+            </span>
+            <span className={"nav".concat(" ").concat(this.state.quotes ? "active" : null)} 
+              onClick={activeClass} 
+              id="quotes">
+                <Link to="/quotes">Quotes Corner</Link>
+            </span>
+            <span className={"nav".concat(" ").concat(this.state.contact ? "active" : null)} 
+              onClick={activeClass} 
+              id="contact">
+                <Link to="/contact">Contact</Link>
+            </span>
+            <span className="icon" onClick={hamburger}>
+              <i className="fa fa-bars"></i>
+            </span>
+          </div>
+        </div>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/about" component={About} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/quotes" component={Quotes} />
+          <Route path="/contact" component={Contact} />
+          <Route component={Error} />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
