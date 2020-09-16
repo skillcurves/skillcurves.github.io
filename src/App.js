@@ -102,7 +102,7 @@ class App extends Component {
             <span className={"nav".concat(" ").concat(this.state.about ? "active" : null)} 
               onClick={activeClass} 
               id="about">
-                <Link to="/about">About Us</Link>
+                <Link to={process.env.PUBLIC_URL+"/about"}>About Us</Link>
             </span>
             <span className={"nav".concat(" ").concat(this.state.blog ? "active" : null)} 
               onClick={activeClass} 
