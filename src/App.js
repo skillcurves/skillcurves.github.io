@@ -97,7 +97,7 @@ class App extends Component {
             <span className={"nav".concat(" ").concat(this.state.home ? "active" : null)} 
               onClick={activeClass} 
               id="home">
-                <Link to="/">Home</Link>
+                <Link to={process.env.PUBLIC_URL+"/"}>Home</Link>
             </span>
             <span className={"nav".concat(" ").concat(this.state.about ? "active" : null)} 
               onClick={activeClass} 
@@ -125,7 +125,7 @@ class App extends Component {
           </div>
         </div>
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path={process.env.PUBLIC_URL+"/"} component={Home} exact />
           <Route path={process.env.PUBLIC_URL+"/about"} component={About} />
           <Route path={process.env.PUBLIC_URL+"/blog"} component={Blog} />
           <Route path={process.env.PUBLIC_URL+"/quotes"} component={Quotes} />
