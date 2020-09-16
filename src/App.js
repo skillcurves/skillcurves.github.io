@@ -103,6 +103,7 @@ class App extends Component {
               onClick={activeClass} 
               id="about">
                 <Link to={process.env.PUBLIC_URL+"/about"}>About Us</Link>
+                {console.log("something here",process.env.PUBLIC_URL+"/about")}
             </span>
             <span className={"nav".concat(" ").concat(this.state.blog ? "active" : null)} 
               onClick={activeClass} 
