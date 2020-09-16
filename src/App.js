@@ -94,30 +94,30 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <div className="navigation" id="navigationId">
-            <span className={"nav".concat(" ").concat(this.state.home ? "active" : null)} 
-              onClick={activeClass} 
+            <span className={"nav".concat(" ").concat(this.state.home ? "active" : null)}
+              onClick={activeClass}
               id="home">
-                <Link to={"/"}>Home</Link>
+              <Link to={"/"}>Home</Link>
             </span>
-            <span className={"nav".concat(" ").concat(this.state.about ? "active" : null)} 
-              onClick={activeClass} 
+            <span className={"nav".concat(" ").concat(this.state.about ? "active" : null)}
+              onClick={activeClass}
               id="about">
-                <Link to={"/about"}>About Us</Link>
+              <Link to={"/about"}>About Us</Link>
             </span>
-            <span className={"nav".concat(" ").concat(this.state.blog ? "active" : null)} 
-              onClick={activeClass} 
+            <span className={"nav".concat(" ").concat(this.state.blog ? "active" : null)}
+              onClick={activeClass}
               id="blog">
-                <Link to="/blog">Blog</Link>
+              <Link to="/blog">Blog</Link>
             </span>
-            <span className={"nav".concat(" ").concat(this.state.quotes ? "active" : null)} 
-              onClick={activeClass} 
+            <span className={"nav".concat(" ").concat(this.state.quotes ? "active" : null)}
+              onClick={activeClass}
               id="quotes">
-                <Link to="/quotes">Quotes Corner</Link>
+              <Link to="/quotes">Quotes Corner</Link>
             </span>
-            <span className={"nav".concat(" ").concat(this.state.contact ? "active" : null)} 
-              onClick={activeClass} 
+            <span className={"nav".concat(" ").concat(this.state.contact ? "active" : null)}
+              onClick={activeClass}
               id="contact">
-                <Link to="/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </span>
             <span className="icon" onClick={hamburger}>
               <i className="fa fa-bars"></i>
