@@ -127,7 +127,7 @@ class App extends Component {
         <Switch>
           <Route path={"/"} component={Home} exact />
           <Route path={"/about"} component={About} />
-          <Route path={"https://skillcurves.com/blog"} component={Blog} />
+          <Route path={"/blog"} component={Blog} />
           <Route path={"/quotes"} component={Quotes} />
           <Route path={"/contact"} component={Contact} />
           <Route component={Error} />
