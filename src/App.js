@@ -97,18 +97,17 @@ class App extends Component {
             <span className={"nav".concat(" ").concat(this.state.home ? "active" : null)} 
               onClick={activeClass} 
               id="home">
-                <Link to={process.env.PUBLIC_URL+"/"}>Home</Link>
+                <Link to={"/"}>Home</Link>
             </span>
             <span className={"nav".concat(" ").concat(this.state.about ? "active" : null)} 
               onClick={activeClass} 
               id="about">
-                <Link to={process.env.PUBLIC_URL+"/about"}>About Us</Link>
-                {console.log("something here",process.env.PUBLIC_URL+"/about")}
+                <Link to={"/about"}>About Us</Link>
             </span>
             <span className={"nav".concat(" ").concat(this.state.blog ? "active" : null)} 
               onClick={activeClass} 
               id="blog">
-                <Link to="/blog">Blog</Link>
+                <Link to="https://skillcurves.com/blog">Blog</Link>
             </span>
             <span className={"nav".concat(" ").concat(this.state.quotes ? "active" : null)} 
               onClick={activeClass} 
@@ -126,11 +125,11 @@ class App extends Component {
           </div>
         </div>
         <Switch>
-          <Route path={process.env.PUBLIC_URL+"/"} component={Home} exact />
-          <Route path={process.env.PUBLIC_URL+"/about"} component={About} />
-          <Route path={process.env.PUBLIC_URL+"/blog"} component={Blog} />
-          <Route path={process.env.PUBLIC_URL+"/quotes"} component={Quotes} />
-          <Route path={process.env.PUBLIC_URL+"/contact"} component={Contact} />
+          <Route path={"/"} component={Home} exact />
+          <Route path={"/about"} component={About} />
+          <Route path={"https://skillcurves.com/blog"} component={Blog} />
+          <Route path={"/quotes"} component={Quotes} />
+          <Route path={"/contact"} component={Contact} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
