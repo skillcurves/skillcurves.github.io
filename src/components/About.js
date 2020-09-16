@@ -13,6 +13,7 @@ function About() {
                     <br />
                     <span className="founder">Karthikeya Udupa, Founder</span>
                 </div>
+                <hr/>
                 <p>
                     Karthikeya Udupa is the founder of Skill Curves. He brings 15+ years of experience from reputed
                     organisations like Angel Broking and Sumedha Fiscal Services Ltd. His corporate life presented scale

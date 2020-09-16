@@ -126,10 +126,10 @@ class App extends Component {
         </div>
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/about" component={About} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/quotes" component={Quotes} />
-          <Route path="/contact" component={Contact} />
+          <Route path={process.env.PUBLIC_URL+"/about"} component={About} />
+          <Route path={process.env.PUBLIC_URL+"/blog"} component={Blog} />
+          <Route path={process.env.PUBLIC_URL+"/quotes"} component={Quotes} />
+          <Route path={process.env.PUBLIC_URL+"/contact"} component={Contact} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
