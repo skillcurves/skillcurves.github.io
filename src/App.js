@@ -1,5 +1,5 @@
 import React, { Component } /*, { useEffect } */ from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { /*BrowserRouter,*/ HashRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Blog from './components/Blog';
@@ -91,7 +91,7 @@ class App extends Component {
     }
 
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <div className="navigation" id="navigationId">
             <span className={"nav".concat(" ").concat(this.state.home ? "active" : null)}
@@ -132,7 +132,7 @@ class App extends Component {
           <Route path={"/contact"} component={Contact} />
           <Route component={Error} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
