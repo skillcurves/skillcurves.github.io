@@ -6,6 +6,7 @@ function Blog() {
 
     useEffect(() => {
         // GET request using fetch inside useEffect React hook
+        //http://localhost:5000
         fetch('https://skillcurves.herokuapp.com/blogarticles/?titlesOnly=Y')
             .then(response => response.json())
             .then(data => setArticles(data));
