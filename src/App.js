@@ -5,6 +5,8 @@ import About from './components/About';
 import Blog from './components/Blog';
 import Quotes from './components/Quotes';
 import Contact from './components/Contact';
+import Article from './components/Article';
+import TermsAndConditions from './components/TermsAndConditions';
 import Error from './components/Error';
 import './App.css';
 
@@ -123,6 +125,13 @@ class App extends Component {
               <i className="fa fa-bars"></i>
             </span>
           </div>
+          <div className="icon-bar">
+            <a href="https://www.facebook.com/SkillCurves.SC" rel="noopener noreferrer" target="_blank" className="facebook"><i className="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/UdupaKarthikeya" rel="noopener noreferrer" target="_blank" className="twitter"><i className="fa fa-twitter"></i></a>
+            {/* <a href="#" className="google"><i className="fa fa-google"></i></a>  */}
+            {/* <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a> */}
+            <a href="https://www.youtube.com/channel/UCbbBeNKwSYBungjLW9Bodzg" rel="noopener noreferrer" target="_blank" className="youtube"><i className="fa fa-youtube"></i></a>
+          </div>
         </div>
         <Switch>
           <Route path={"/"} component={Home} exact />
@@ -130,6 +139,8 @@ class App extends Component {
           <Route path={"/blog"} component={Blog} />
           <Route path={"/quotes"} component={Quotes} />
           <Route path={"/contact"} component={Contact} />
+          <Route path={"/termsandconditions"} component={TermsAndConditions}/>
+          <Route exact path={"/:articleName"} component={Article} />
           <Route component={Error} />
         </Switch>
       </HashRouter>

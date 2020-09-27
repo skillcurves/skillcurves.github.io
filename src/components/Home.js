@@ -1,4 +1,5 @@
 import React, { Fragment, Component } /*, { useEffect } */ from 'react';
+import { Link } from 'react-router-dom';
 import './Banner.scss';
 
 class Home extends Component {
@@ -80,10 +81,13 @@ class Home extends Component {
                 <div className="newsletterLead">
                     <div className="newsletterBoxes">
                         <form action="" method="">
-                            <label htmlFor="email"><h2>Subscribe to our weekly newsletter...</h2></label>
+                            <label htmlFor="email">
+                                Never miss what really matters in Stock Market. Stay informed by subscribing to our free weekly
+                            newsletter which covers short summary of the week, technical &amp; derivative view, week ahead in a 
+                            short and plain language. Read our <Link to="/termsandconditions">Terms and Conditions</Link></label>
                             <div>
-                            <input type="email" placeholder="Enter Your Email Here" name="email" id="email" />
-                            <button type="submit" className="registerbtn">Subscribe</button>
+                                <input type="email" placeholder="Enter Your Email Here" name="email" id="email" />
+                                <button type="submit" className="registerbtn" disabled>Subscribe</button>
                             </div>
                         </form>
                     </div>

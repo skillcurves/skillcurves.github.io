@@ -63,7 +63,13 @@ function Contact() {
                 </div>
                 <div className="row">
                     <div className="column">
-                        <img src={require('../images/skillcurves contact.jpg')} alt="Skill Curves Contact" width="100%" height="auto" />
+                        <div className="contactCard">
+                            <h3>Skill Curves</h3>
+                            <hr/>
+                            <p>Shamya Prasa Building, Kinnigoli, Mangalore, 574150</p>
+                            <p><strong>Ph:</strong> 8867316744</p>
+                            <p><strong>Email:</strong> contact@skillcurves.com</p>
+                        </div>
                     </div>
                     <div className="column">
                         <form method="POST" onSubmit={handleSubmit} id="contact-form">
