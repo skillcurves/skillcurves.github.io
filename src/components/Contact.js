@@ -1,4 +1,5 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Contact() {
@@ -65,7 +66,7 @@ function Contact() {
                     <div className="column">
                         <div className="contactCard">
                             <h3>Skill Curves</h3>
-                            <hr/>
+                            <hr />
                             <p>Shamya Prasa Building, Kinnigoli, Mangalore, 574150</p>
                             <p><strong>Ph:</strong> 8867316744</p>
                             <p><strong>Email:</strong> contact@skillcurves.com</p>
@@ -87,6 +88,12 @@ function Contact() {
                         </form>
                     </div>
                 </div>
+            </div>
+            <div className="footer">
+                <Link to="/termsandconditions">Terms and Conditions</Link>
+                <span> | </span>
+                <Link to="/privacypolicy">Privacy Policy</Link>
+                <span> | Copyright © 2020 skillcurves.com</span>
             </div>
         </Fragment>
     );

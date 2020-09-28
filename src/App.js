@@ -7,6 +7,7 @@ import Quotes from './components/Quotes';
 import Contact from './components/Contact';
 import Article from './components/Article';
 import TermsAndConditions from './components/TermsAndConditions';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import Error from './components/Error';
 import './App.css';
 
@@ -131,7 +132,15 @@ class App extends Component {
             {/* <a href="#" className="google"><i className="fa fa-google"></i></a>  */}
             {/* <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a> */}
             <a href="https://www.youtube.com/channel/UCbbBeNKwSYBungjLW9Bodzg" rel="noopener noreferrer" target="_blank" className="youtube"><i className="fa fa-youtube"></i></a>
-          </div>
+          </div> 
+          {/* {
+            !this.state.home ?
+              <div className="footer">
+                <Link to="/termsandconditions">Terms and Conditions</Link>
+              </div>
+              :
+              null
+          } */}
         </div>
         <Switch>
           <Route path={"/"} component={Home} exact />
@@ -139,9 +148,10 @@ class App extends Component {
           <Route path={"/blog"} component={Blog} />
           <Route path={"/quotes"} component={Quotes} />
           <Route path={"/contact"} component={Contact} />
-          <Route path={"/termsandconditions"} component={TermsAndConditions}/>
+          <Route path={"/termsandconditions"} component={TermsAndConditions} />
+          <Route path={"/privacypolicy"} component={PrivacyPolicy} />
+          <Route exact path={"/error"} component={Error} />
           <Route exact path={"/:articleName"} component={Article} />
-          <Route component={Error} />
         </Switch>
       </HashRouter>
     )

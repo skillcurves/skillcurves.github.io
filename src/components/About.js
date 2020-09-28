@@ -1,4 +1,5 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
+import { Link } from 'react-router-dom';
 
 function About() {
     return (
@@ -13,7 +14,7 @@ function About() {
                     <br />
                     <span className="founder">Karthikeya Udupa, Founder</span>
                 </div>
-                <hr/>
+                <hr />
                 <p>
                     Karthikeya Udupa is the founder of Skill Curves. He brings 15+ years of experience from reputed
                     organisations like Angel Broking and Sumedha Fiscal Services Ltd. His corporate life presented scale
@@ -33,9 +34,12 @@ function About() {
                     unhappy? I am because we are”.
                 </p>
             </div>
-            {/* <div className="footer">
-                www.skillcurves.com
-            </div> */}
+            <div className="footer">
+                <Link to="/termsandconditions">Terms and Conditions</Link>
+                <span> | </span>
+                <Link to="/privacypolicy">Privacy Policy</Link>
+                <span> | Copyright © 2020 skillcurves.com</span>
+            </div>
         </Fragment>
     );
 }
