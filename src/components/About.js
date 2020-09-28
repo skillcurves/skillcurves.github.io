@@ -1,5 +1,5 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function About() {
     return (
@@ -34,12 +34,12 @@ function About() {
                     unhappy? I am because we are”.
                 </p>
             </div>
-            <div className="footer">
+            {/* <div className="footer">
                 <Link to="/termsandconditions">Terms and Conditions</Link>
                 <span> | </span>
                 <Link to="/privacypolicy">Privacy Policy</Link>
                 <span> | Copyright © 2020 skillcurves.com</span>
-            </div>
+            </div> */}
         </Fragment>
     );
 }
