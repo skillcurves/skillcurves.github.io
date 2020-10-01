@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7791b0b1c03703067d62abe7cd0bd349",
+    "revision": "2825993f1af6e82cb678a0aa2b3e0761",
     "url": "/index.html"
   },
   {
-    "revision": "1ea258c960c927871d38",
-    "url": "/static/css/main.ad948de2.chunk.css"
+    "revision": "e159ab1a53f2035c0255",
+    "url": "/static/css/main.9b487732.chunk.css"
   },
   {
     "revision": "357cc9f0a6462878cc12",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.c40111ba.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1ea258c960c927871d38",
-    "url": "/static/js/main.602deeda.chunk.js"
+    "revision": "e159ab1a53f2035c0255",
+    "url": "/static/js/main.9fac0814.chunk.js"
   },
   {
     "revision": "819a3dc51a9abfe40723",
@@ -36,12 +36,52 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Josefin_Sans3.b263b054.woff2"
   },
   {
+    "revision": "f53a38dc726e61d681fbf5e82b6ac130",
+    "url": "/static/media/Josefin_Sans_Banner1.f53a38dc.woff2"
+  },
+  {
+    "revision": "cf476b4af4a29074d9e26f2168a2cd12",
+    "url": "/static/media/Josefin_Sans_Banner2.cf476b4a.woff2"
+  },
+  {
+    "revision": "804a342f4124dfe207a3431baa4d248a",
+    "url": "/static/media/Josefin_Sans_Banner3.804a342f.woff2"
+  },
+  {
     "revision": "1b5735696f555f4761a07331a98d9be2",
     "url": "/static/media/KaushanScript.1b573569.woff2"
   },
   {
     "revision": "e2ea67e80b95334da4768bffdf3d4f9d",
     "url": "/static/media/KaushanScript2.e2ea67e8.woff2"
+  },
+  {
+    "revision": "099238501d0c140e2658ff163b7daa70",
+    "url": "/static/media/Lato1.09923850.woff2"
+  },
+  {
+    "revision": "98d8cf792834c0bef59c2be99dc3533d",
+    "url": "/static/media/Lato2.98d8cf79.woff2"
+  },
+  {
+    "revision": "7caea486456d0c86eaff59aa86e542be",
+    "url": "/static/media/Montserrat1.7caea486.woff2"
+  },
+  {
+    "revision": "cc01ffb3460a9040eb8e57b114e954cb",
+    "url": "/static/media/Montserrat2.cc01ffb3.woff2"
+  },
+  {
+    "revision": "3862f69a5f5c0eba8176da855e5937f8",
+    "url": "/static/media/Montserrat3.3862f69a.woff2"
+  },
+  {
+    "revision": "86a4da42c3dda46f89b6884198c1ee0d",
+    "url": "/static/media/Montserrat4.86a4da42.woff2"
+  },
+  {
+    "revision": "39d93cf678c740f9f6b2b1cfde34bee3",
+    "url": "/static/media/Montserrat5.39d93cf6.woff2"
   },
   {
     "revision": "fd1fc61584a9227e71be3dacee3540f1",
