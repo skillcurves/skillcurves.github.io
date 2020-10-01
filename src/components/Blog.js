@@ -30,7 +30,7 @@ function Blog() {
                     articles ?
                         articles.articles.map(article =>
                             <div key={article.slug} className="articleLink">
-                                <Link to={"/" + article.slug} key={article.slug}>{article.title}</Link>
+                                <Link rel="preload" to={"/" + article.slug} key={article.slug}>{article.title}</Link>
                                 <p>
                                     {article.description}
                                 </p>
