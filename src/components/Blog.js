@@ -25,7 +25,7 @@ function Blog() {
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div className="bloglinks">
+            <div className="bloglinks animate-bottom">
                 {
                     articles ?
                         articles.articles.map(article =>
@@ -40,7 +40,7 @@ function Blog() {
                             </div>
                         )
                         :
-                        <h1>Loading...</h1>
+                        <div className="loader"></div>
                 }
             </div>
             {/* <div className="footer">

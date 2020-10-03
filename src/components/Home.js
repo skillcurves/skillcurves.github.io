@@ -1,5 +1,6 @@
 import React, { Fragment, Component } /*, { useEffect } */ from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './Banner.scss';
 
 class Home extends Component {
@@ -50,6 +51,41 @@ class Home extends Component {
         let boldStyle = {
             color: this.state.bold
         }
+        const handleSubscription = (e) => {
+            e.preventDefault();
+
+            const params = new URLSearchParams();
+
+            const subscriber = document.getElementById('subscriber').value;
+
+            params.append('subscriber', subscriber);
+
+            axios({
+                method: "POST",
+                url: "https://skillcurves.herokuapp.com/subscribe",
+                // headers: {'Content-Type': 'application/json' },
+                data: params
+            }).then((response) => {
+                console.log(response);
+                if (response.data.msg === 'success') {
+                    document.getElementById("alert").style.display = "block";
+                    resetSubscriptionForm();
+                } else if (response.data.msg === 'fail') {
+                    alert("Not Subsribed")
+                }
+            })
+        }
+
+        const resetSubscriptionForm = () => {
+            document.getElementById('subscription-form').reset();
+        }
+
+        const closeAlert = (e) => {
+            const close = document.getElementById("closebtn");
+            const div = close.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function () { div.style.display = "none"; }, 600);
+        }
 
         return (
             <Fragment>
@@ -78,16 +114,20 @@ class Home extends Component {
                 </div>
                 <div className="newsletterLead">
                     <div className="newsletterBoxes">
-                        <form action="" method="">
+                        <form method="POST" onSubmit={handleSubscription} id="subscription-form">
                             <label htmlFor="email">
                                 Never miss what really matters in Stock Market. Stay informed by subscribing to our free weekly
                                 newsletter which covers short summary of the week, technical &amp; derivative view, week ahead in a
                             short and plain language. Read our <Link to="/termsandconditions">Terms and Conditions</Link></label>
-                            <div>
-                                <input type="email" placeholder="Enter Your Email Here" name="email" id="email" />
-                                <button type="submit" className="registerbtn" disabled>Subscribe</button>
+                            <div className="newsletterFields">
+                                <input type="email" placeholder="Enter Your Email Here" name="subscriber" id="subscriber" />
+                                <button type="submit" className="registerbtn">Subscribe</button>
                             </div>
                         </form>
+                        <div className="alert success" id="alert">
+                            <span id="closebtn" className="closebtn" onClick={closeAlert}>&times;</span>
+                            <strong>Success!</strong> You are subscribed !!
+                        </div>
                     </div>
                 </div>
                 <div className="footer">

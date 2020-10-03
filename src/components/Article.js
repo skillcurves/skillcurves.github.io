@@ -31,7 +31,7 @@ function Article({ match, location }) {
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div className="blog">
+            <div className="blog animate-bottom">
                 {
                     articles ?
                         articles.articles.length > 0 ?
@@ -54,7 +54,7 @@ function Article({ match, location }) {
                             :
                             <Redirect to="/error" />
                         :
-                        <h1>Loading...</h1>
+                        <div className="loader"></div>
                 }
             </div>
             {/* <div className="footer">

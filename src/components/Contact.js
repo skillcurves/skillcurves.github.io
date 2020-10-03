@@ -53,8 +53,8 @@ function Contact() {
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div class="alert success" id="alert">
-                <span id="closebtn" class="closebtn" onClick={closeAlert}>&times;</span>
+            <div className="alert success" id="alert">
+                <span id="closebtn" className="closebtn" onClick={closeAlert}>&times;</span>
                 <strong>Success!</strong> Your details have been sent
             </div>
             <div className="contactContainer">

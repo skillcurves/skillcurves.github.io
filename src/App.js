@@ -35,6 +35,9 @@ class App extends Component {
     }
 
     const activeClass = (event) => {
+      let x = document.getElementById("navigationId");
+      x.className = "navigation";
+
       switch (event.currentTarget.id) {
         case 'home':
           this.setState({
