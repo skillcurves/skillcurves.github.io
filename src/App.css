@@ -499,6 +499,11 @@
   .icon-bar a {
     padding: 2px;
   }
+
+  .blog {
+    width: 75%;
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -514,6 +519,7 @@
 
   .blog {
     width: 75%;
+    font-size: 1.5rem;
   }
 }
 
@@ -530,5 +536,6 @@
 
   .blog {
     width: 75%;
+    font-size: 1.5rem;
   }
 }
