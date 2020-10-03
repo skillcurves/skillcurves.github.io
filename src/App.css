@@ -497,7 +497,7 @@
     margin-top: 0;
   }
   .icon-bar a {
-    padding: 5px;
+    padding: 2px;
   }
 }
 
@@ -507,6 +507,14 @@
     grid-template-columns: 1fr;
     grid-gap: 1rem 0rem;
   }
+
+  .icon-bar a {
+    padding: 2px;
+  }
+
+  .blog {
+    width: 75%;
+  }
 }
 
 @media screen and (min-width: 450px) and (max-height: 700px) {
@@ -514,5 +522,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem 1rem;
+  }
+
+  .icon-bar a {
+    padding: 2px;
+  }
+
+  .blog {
+    width: 75%;
   }
 }
