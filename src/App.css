@@ -81,7 +81,7 @@
   padding: 1rem;
   width: 70%;
   text-align: justify;
-  font-family: "Raleway script=latin rev=1";
+  font-family: "Georgia, 'Times New Roman', Times, serif";
   font-weight: 500;
   font-style: normal;
   font-size: 1.3rem;
@@ -148,7 +148,7 @@
   padding: 1rem;
   width: 60%;
   text-align: justify;
-  font-family: "Raleway script=latin rev=1";
+  font-family: "Georgia, 'Times New Roman', Times, serif";
   font-weight: 400;
   font-style: normal;
   font-size: 1.3rem;
@@ -296,8 +296,8 @@
   padding: 1rem;
   width: 60%;
   text-align: justify;
-  font-family: "Raleway script=latin rev=1";
-  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: lighter;
   font-style: normal;
   font-size: 1.3rem;
   line-height: 2.1rem;
@@ -326,7 +326,7 @@
   padding: 1rem;
   width: 70%;
   text-align: justify;
-  font-family: "Raleway script=latin rev=1";
+  font-family: "Georgia, 'Times New Roman', Times, serif";
   font-weight: 500;
   font-style: normal;
   font-size: 1.3rem;
@@ -503,6 +503,7 @@
   .blog {
     width: 75%;
     font-size: 1.5rem;
+    font-weight: normal;
   }
 }
 
@@ -520,6 +521,7 @@
   .blog {
     width: 75%;
     font-size: 1.5rem;
+    font-weight: normal;
   }
 }
 
@@ -537,5 +539,6 @@
   .blog {
     width: 75%;
     font-size: 1.5rem;
+    font-weight: normal;
   }
 }
