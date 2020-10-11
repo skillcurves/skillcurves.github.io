@@ -347,7 +347,7 @@
   /* rgba(0, 0, 0, .5) */
   box-shadow: 0 0 1rem #1c2550;  
   font-size: 1.3rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .quotelinks .inner .box .text div {
