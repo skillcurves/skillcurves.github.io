@@ -39,7 +39,7 @@ function Quotes() {
                                             <div>
                                             <Link rel="preload" to={"/quote/" + quote.slug} key={quote.slug}>{quote.title}</Link>
                                             <div className="quote">{quote.quote}</div>
-                                            <div className="credit">{quote.authorName}, {new Date(quote.createdAt).toLocaleDateString(undefined, options)}</div>
+                                            <div className="credit">{new Date(quote.createdAt).toLocaleDateString(undefined, options)}</div>
                                             </div>
                                         </div>
                                     </div>

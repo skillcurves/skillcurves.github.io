@@ -41,10 +41,7 @@ function Quote({ match, location }) {
                                     dangerouslySetInnerHTML={{
                                         __html:
                                             `<h1>${quote.title}</h1>`
-                                            + `<div class="author">
-                                            <img class="authorImg" src="${quote.authorImageUrl}" alt="Skill Curves Author"/>`
                                             + `<div style="flex-direction: column">
-                                <span><strong>${quote.authorName}</strong></span>
                                 <span>${new Date(quote.createdAt).toLocaleDateString(undefined, options)}</span>
                                 </div>
                                 </div>`
