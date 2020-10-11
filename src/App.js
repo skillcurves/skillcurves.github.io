@@ -6,6 +6,7 @@ import Blog from './components/Blog';
 import Quotes from './components/Quotes';
 import Contact from './components/Contact';
 import Article from './components/Article';
+import Quote from './components/Quote';
 import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Error from './components/Error';
@@ -155,6 +156,7 @@ class App extends Component {
           <Route path={"/privacypolicy"} component={PrivacyPolicy} />
           <Route exact path={"/error"} component={Error} />
           <Route exact path={"/:articleName"} component={Article} />
+          <Route exact path={"/quote/:quoteName"} component={Quote} />
         </Switch>
       </HashRouter>
     )

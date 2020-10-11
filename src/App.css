@@ -5,6 +5,12 @@
   /* margin-top: 30rem; */
 }
 
+:root {
+	--main-color: #643A7A;
+	--secondary-color: #741CAF;
+	--sans: "josefin sans", sans serif;
+}
+
 .logo {
   position: fixed;
   top: 7px;
@@ -321,7 +327,92 @@
   height: auto;
 }
 
-.terms {
+.quotelinks {
+  margin: auto;
+  padding: 1rem;
+  width: 60%;
+  font-family: "Righteous";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem 0rem;
+}
+
+.quotelinks .inner .box {
+  background: #fff;
+  /* border-radius: 5px; */
+  /* rgba(0, 0, 0, .5) */
+  box-shadow: 0 0 1rem #1c2550;  
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.quotelinks .inner .box .text div {
+  padding-top: 1.5rem;
+}
+
+.quotelinks .inner .box .text div a {
+  /* text-decoration: none; */
+  color: #000000;
+  font-weight: bold;  
+}
+
+.quotelinks .quote {
+  word-wrap: break-word;
+  padding: 1rem;
+}
+
+.quotelinks .credit {
+	font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 500;
+  font-style: italic;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.quotelinks .fas {
+	font-size: 3.5rem;
+  /* color: rgba(100, 58, 122, .2); */
+  color: #1c2550;
+  float: left;
+  padding: 1rem;
+}
+
+.quotes {
+  margin: auto;
+  padding: 1rem;
+  width: 60%;
+  text-align: justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+
+.quotes .author {
+  display: flex;
+  align-items: center;
+}
+
+.quotes .author span {
+  font-size: 1rem;
+  padding-left: 1rem;
+  clear: left;
+  float: left;
+}
+
+.quotes .author .authorImg {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: auto;
+}
+
+.quotes {
   margin: auto;
   padding: 1rem;
   width: 70%;
