@@ -118,7 +118,8 @@ class Home extends Component {
                             <label htmlFor="email">
                                 Never miss what really matters in Stock Market. Stay informed by subscribing to our free weekly
                                 newsletter which covers short summary of the week, technical &amp; derivative view, week ahead in a
-                            short and plain language. Read our <Link to="/termsandconditions">Terms and Conditions</Link></label>
+                                short and plain language.
+                            </label>
                             <div className="newsletterFields">
                                 <input type="email" placeholder="Enter Your Email Here" name="subscriber" id="subscriber" />
                                 <button type="submit" className="registerbtn">Subscribe</button>
