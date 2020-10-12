@@ -1,6 +1,7 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Helmet from 'react-helmet';
 
 function Contact() {
     const handleSubmit = (e) => {
@@ -49,6 +50,10 @@ function Contact() {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content="Skill Curves Contact"></meta>
+                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Contact, Email, Newsletter"></meta>
+            </Helmet>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>

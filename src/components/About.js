@@ -1,9 +1,15 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 // import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
 function About() {
     return (
         <Fragment>
+            <Helmet>
+                <title>Skill Curves | About Us </title>
+                <meta name="description" content="About Skill Curves and Karthekeya Udupa"></meta>
+                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, About Us, Blog, Finance, Stock Market"></meta>
+            </Helmet>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>

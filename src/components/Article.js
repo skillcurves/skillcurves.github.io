@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Redirect /*, Link*/ } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
 function Article({ match, location }) {
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
@@ -27,12 +28,20 @@ function Article({ match, location }) {
 
     return (
         <Fragment>
+            <Helmet>
+                <title>Skill Curves | {articles !== null ? articles.articles[0].title : "Skill Curves Blog Article"} </title>
+                <meta name="description" content={articles !== null ? articles.articles[0].description : "Skill Curves"}></meta>
+                <meta name="robots" content={articles !== null ? articles.articles[0].metadataKeywords: "Skill Curves"}></meta>
+            </Helmet>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
             <div className="blog animate-bottom">
                 {
+                    console.log(articles)
+                }
+                {                    
                     articles ?
                         articles.articles.length > 0 ?
                             articles.articles.map(article =>

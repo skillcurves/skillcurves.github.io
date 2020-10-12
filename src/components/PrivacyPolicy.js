@@ -1,9 +1,15 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
 function PrivacyPolicy() {
     return (
         <Fragment>
+            <Helmet>
+                <title>Skill Curves | Privacy Policy</title>
+                <meta name="description" content="Skill Curves Privacy Policy"></meta>
+                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Quotes, Stocks, Finance, Money"></meta>
+            </Helmet>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>

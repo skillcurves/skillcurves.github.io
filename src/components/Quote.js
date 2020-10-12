@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Redirect /*, Link*/ } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
 function Quote({ match, location }) {
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
@@ -28,6 +29,11 @@ function Quote({ match, location }) {
 
     return (
         <Fragment>
+            <Helmet>
+                <title>Skill Curves | {quotes !== null ? quotes.quotes[0].title : "Skill Curves Quote Corner"} </title>
+                <meta name="description" content={quotes !== null ? quotes.quotes[0].description : "Skill Curves Quotes Corner"}></meta>
+                <meta name="robots" content={quotes !== null ? quotes.quotes[0].metadataKeywords: "Skill Curves"}></meta>
+            </Helmet>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>

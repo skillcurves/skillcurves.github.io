@@ -1,6 +1,7 @@
 import React, { Fragment, Component } /*, { useEffect } */ from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Helmet from 'react-helmet';
 import './Banner.scss';
 
 class Home extends Component {
@@ -89,6 +90,10 @@ class Home extends Component {
 
         return (
             <Fragment>
+                <Helmet>
+                    <meta name="description" content="Skill Curves"></meta>
+                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Article, Finance, Stock Market"></meta>
+                </Helmet>
                 <section id="app" style={sectionStyle}>
                     <h1 className="middle">
                         Learning <span className="bold" style={boldStyle}>Skills</span> .

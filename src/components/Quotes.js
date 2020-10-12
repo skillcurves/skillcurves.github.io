@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
 function Quotes() {
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
@@ -23,6 +24,10 @@ function Quotes() {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content="Skill Curves Quotes Corner"></meta>
+                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Quotes, Life, Finance, Money"></meta>
+            </Helmet>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
