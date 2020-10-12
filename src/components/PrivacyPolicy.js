@@ -2,9 +2,19 @@ import React, { Fragment } /*, { useEffect } */ from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 function PrivacyPolicy() {
+    let history = createBrowserHistory();
+    ReactGA.initialize('UA-180316702-1');
+    history.listen((location, action) => {
+      ReactGA.set({ page: location.pathname });
+      ReactGA.pageview(location.pathname);
+    });
+
     return (
-        <Fragment>
+        <Fragment history={history}>
             <Helmet>
                 <title>Skill Curves | Privacy Policy</title>
                 <meta name="description" content="Skill Curves Privacy Policy"></meta>

@@ -2,7 +2,17 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 function Blog() {
+    let history = createBrowserHistory();
+    ReactGA.initialize('UA-180316702-1');
+    history.listen((location, action) => {
+      ReactGA.set({ page: location.pathname });
+      ReactGA.pageview(location.pathname);
+    });
+
     const [articles, setArticles] = useState(null);
 
     useEffect(() => {
@@ -21,7 +31,7 @@ function Blog() {
     }, []);
 
     return (
-        <Fragment>
+        <Fragment history={history}>
             <Helmet>
                 <meta name="description" content="Skill Curves Blog Articles"></meta>
                 <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Article, Finance, Stock Market"></meta>

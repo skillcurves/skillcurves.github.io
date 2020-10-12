@@ -4,6 +4,9 @@ import axios from 'axios';
 import Helmet from 'react-helmet';
 import './Banner.scss';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -45,6 +48,13 @@ class Home extends Component {
     }
 
     render() {
+        let history = createBrowserHistory();
+        ReactGA.initialize('UA-180316702-1');
+        history.listen((location, action) => {
+            ReactGA.set({ page: location.pathname });
+            ReactGA.pageview(location.pathname);
+        });
+
         let sectionStyle = {
             backgroundColor: this.state.background,
             color: this.state.text
@@ -89,7 +99,7 @@ class Home extends Component {
         }
 
         return (
-            <Fragment>
+            <Fragment history={history}>
                 <Helmet>
                     <meta name="description" content="Skill Curves"></meta>
                     <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Article, Finance, Stock Market"></meta>

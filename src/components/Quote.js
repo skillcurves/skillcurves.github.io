@@ -2,7 +2,17 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Redirect /*, Link*/ } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 function Quote({ match, location }) {
+    let history = createBrowserHistory();
+    ReactGA.initialize('UA-180316702-1');
+    history.listen((location, action) => {
+      ReactGA.set({ page: location.pathname });
+      ReactGA.pageview(location.pathname);
+    });
+
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
 
     const [quotes, setQuotes] = useState(null);
@@ -28,7 +38,7 @@ function Quote({ match, location }) {
     }, []);
 
     return (
-        <Fragment>
+        <Fragment history={history}>
             <Helmet>
                 <title>Skill Curves | {quotes !== null ? quotes.quotes[0].title : "Skill Curves Quote Corner"} </title>
                 <meta name="description" content={quotes !== null ? quotes.quotes[0].description : "Skill Curves Quotes Corner"}></meta>

@@ -3,7 +3,17 @@ import React, { Fragment } /*, { useEffect } */ from 'react';
 import axios from 'axios';
 import Helmet from 'react-helmet';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 function Contact() {
+    let history = createBrowserHistory();
+    ReactGA.initialize('UA-180316702-1');
+    history.listen((location, action) => {
+      ReactGA.set({ page: location.pathname });
+      ReactGA.pageview(location.pathname);
+    });
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -49,7 +59,7 @@ function Contact() {
     }
 
     return (
-        <Fragment>
+        <Fragment history={history}>
             <Helmet>
                 <meta name="description" content="Skill Curves Contact"></meta>
                 <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Contact, Email, Newsletter"></meta>

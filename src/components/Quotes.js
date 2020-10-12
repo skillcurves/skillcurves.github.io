@@ -2,7 +2,17 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 function Quotes() {
+    let history = createBrowserHistory();
+    ReactGA.initialize('UA-180316702-1');
+    history.listen((location, action) => {
+      ReactGA.set({ page: location.pathname });
+      ReactGA.pageview(location.pathname);
+    });
+
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
 
     const [quotes, setQuotes] = useState(null);
@@ -23,7 +33,7 @@ function Quotes() {
     }, []);
 
     return (
-        <Fragment>
+        <Fragment history={history}>
             <Helmet>
                 <meta name="description" content="Skill Curves Quotes Corner"></meta>
                 <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Quotes, Life, Finance, Money"></meta>

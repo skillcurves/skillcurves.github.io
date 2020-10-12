@@ -23,7 +23,7 @@ class App extends Component {
       quotes: false,
       contact: false
     }
-  }
+  }  
 
   render() {
     const hamburger = (event) => {

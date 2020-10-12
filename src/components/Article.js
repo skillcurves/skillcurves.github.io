@@ -2,7 +2,18 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Redirect /*, Link*/ } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
+import { createBrowserHistory } from 'history';
+import ReactGA from 'react-ga';
+
 function Article({ match, location }) {
+    
+    let history = createBrowserHistory();
+    ReactGA.initialize('UA-180316702-1');
+    history.listen((location, action) => {
+      ReactGA.set({ page: location.pathname });
+      ReactGA.pageview(location.pathname);
+    });
+
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
 
     const [articles, setArticles] = useState(null);
@@ -27,7 +38,7 @@ function Article({ match, location }) {
     }, []);
 
     return (
-        <Fragment>
+        <Fragment history={history}>
             <Helmet>
                 <title>Skill Curves | {articles !== null ? articles.articles[0].title : "Skill Curves Blog Article"} </title>
                 <meta name="description" content={articles !== null ? articles.articles[0].description : "Skill Curves"}></meta>
