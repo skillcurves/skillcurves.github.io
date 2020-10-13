@@ -11,6 +11,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Error from './components/Error';
 import './App.css';
+import './Styles.css';
 
 class App extends Component {
 
