@@ -180,7 +180,7 @@
     margin: auto;
     padding: 1rem;
     width: 60%;
-    font-family: "Righteous";
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
     font-style: normal;
     font-size: 1.3rem;
@@ -206,7 +206,7 @@
   .quotelinks .inner .box .text div a {
     /* text-decoration: none; */
     color: #000000;
-    font-weight: bold;  
+    font-weight: bold;
   }
   
   .quotelinks .quote {
