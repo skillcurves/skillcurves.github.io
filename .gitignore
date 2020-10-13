@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 /src/*.zip
+/src/font_dir.txt
+/src/font_dir2.txt
+fonts.css
 
 # testing
 /coverage
