@@ -1,17 +1,17 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Redirect /*, Link*/ } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
 
 function Article({ match, location }) {
-    
+
     let history = createBrowserHistory();
     ReactGA.initialize('UA-180316702-1');
     history.listen((location, action) => {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
     });
 
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
@@ -38,21 +38,20 @@ function Article({ match, location }) {
     }, []);
 
     return (
-        <Fragment history={history}>
-            <Helmet>
-                <title>Skill Curves | {articles !== null ? articles.articles[0].title : "Skill Curves Blog Article"} </title>
-                <meta name="description" content={articles !== null ? articles.articles[0].description : "Skill Curves"}></meta>
-                <meta name="robots" content={articles !== null ? articles.articles[0].metadataKeywords: "Skill Curves"}></meta>
-            </Helmet>
+        <Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Skill Curves | {articles !== null ? articles.articles[0].title : "Skill Curves Blog Article"} </title>
+                    <meta name="description" content={articles !== null ? articles.articles[0].description : "Skill Curves"}></meta>
+                    <meta name="robots" content={articles !== null ? articles.articles[0].metadataKeywords : "Skill Curves"}></meta>
+                </Helmet>
+            </HelmetProvider>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div className="blog animate-bottom">
+            <div className="blog animate-bottom" history={history}>
                 {
-                    console.log(articles)
-                }
-                {                    
                     articles ?
                         articles.articles.length > 0 ?
                             articles.articles.map(article =>

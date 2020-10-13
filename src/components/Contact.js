@@ -1,7 +1,7 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Helmet from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
@@ -10,8 +10,8 @@ function Contact() {
     let history = createBrowserHistory();
     ReactGA.initialize('UA-180316702-1');
     history.listen((location, action) => {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
     });
 
     const handleSubmit = (e) => {
@@ -59,11 +59,13 @@ function Contact() {
     }
 
     return (
-        <Fragment history={history}>
-            <Helmet>
-                <meta name="description" content="Skill Curves Contact"></meta>
-                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Contact, Email, Newsletter"></meta>
-            </Helmet>
+        <Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description" content="Skill Curves Contact"></meta>
+                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Contact, Email, Newsletter"></meta>
+                </Helmet>
+            </HelmetProvider>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
@@ -72,7 +74,7 @@ function Contact() {
                 <span id="closebtn" className="closebtn" onClick={closeAlert}>&times;</span>
                 <strong>Success!</strong> Your details have been sent
             </div>
-            <div className="contactContainer">
+            <div className="contactContainer" history={history}>
                 <div className="header">
                     <h2>Contact Us</h2>
                     <p>Swing by for a cup of coffee, or leave us a message:</p>

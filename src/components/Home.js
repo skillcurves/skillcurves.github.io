@@ -1,7 +1,7 @@
 import React, { Fragment, Component } /*, { useEffect } */ from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Helmet from 'react-helmet';
+import { HelmetProvider , Helmet} from 'react-helmet-async';
 import './Banner.scss';
 
 import { createBrowserHistory } from 'history';
@@ -99,17 +99,19 @@ class Home extends Component {
         }
 
         return (
-            <Fragment history={history}>
-                <Helmet>
-                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Article, Finance, Stock Market"></meta>
-                </Helmet>
+            <Fragment>
+                <HelmetProvider>
+                    <Helmet>
+                        <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Article, Finance, Stock Market"></meta>
+                    </Helmet>
+                </HelmetProvider>
                 <section id="app" style={sectionStyle}>
                     <h1 className="middle">
                         Learning <span className="bold" style={boldStyle}>Skills</span> .
                         Leading <span className="bold" style={boldStyle}>Profits</span> .
                     </h1>
                 </section>
-                <div className="mainPage">
+                <div className="mainPage" history={history}>
                     <p>
                         Stock-centric skills never cease to exist. This basic investing skill is a permanent skill which was vital
                         100 years ago, as they are today and will still be 100 years from now. Join us in exploring an ocean

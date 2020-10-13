@@ -1,6 +1,6 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 import { Link } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
@@ -9,22 +9,24 @@ function TermsAndConditions() {
     let history = createBrowserHistory();
     ReactGA.initialize('UA-180316702-1');
     history.listen((location, action) => {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
     });
 
     return (
-        <Fragment history={history}>
-            <Helmet>
-                <title>Skill Curves | Terms and Conditions</title>
-                <meta name="description" content="Skill Curves Terms and Conditions"></meta>
-                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Quotes, Stocks, Finance, Money"></meta>
-            </Helmet>
+        <Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Skill Curves | Terms and Conditions</title>
+                    <meta name="description" content="Skill Curves Terms and Conditions"></meta>
+                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Quotes, Stocks, Finance, Money"></meta>
+                </Helmet>
+            </HelmetProvider>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div className="terms">
+            <div className="terms" history={history}>
                 <h2>Terms of service</h2>
                 <p>This page contains important information regarding the terms and conditions which apply when you access
                 our website. Please note that the information contained herein is subject to change without notice.

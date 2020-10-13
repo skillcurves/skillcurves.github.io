@@ -1,6 +1,6 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 // import { Link } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
@@ -9,22 +9,24 @@ function About() {
     let history = createBrowserHistory();
     ReactGA.initialize('UA-180316702-1');
     history.listen((location, action) => {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
     });
 
     return (
-        <Fragment history={history}>
-            <Helmet>
-                <title>Skill Curves | About Us </title>
-                <meta name="description" content="About Skill Curves and Karthekeya Udupa"></meta>
-                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, About Us, Blog, Finance, Stock Market"></meta>
-            </Helmet>
+        <Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Skill Curves | About Us </title>
+                    <meta name="description" content="About Skill Curves and Karthekeya Udupa"></meta>
+                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, About Us, Blog, Finance, Stock Market"></meta>
+                </Helmet>
+            </HelmetProvider>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div className="aboutUs">
+            <div className="aboutUs" history={history}>
                 <div>
                     <img src={require('../images/author.png')} alt="Skill Curves Founder" width="125" height="auto" />
                     <br />

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
@@ -9,8 +9,8 @@ function Quotes() {
     let history = createBrowserHistory();
     ReactGA.initialize('UA-180316702-1');
     history.listen((location, action) => {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
     });
 
     const options = { /*weekday: 'short',*/ year: 'numeric', month: 'short', day: 'numeric' };
@@ -33,16 +33,18 @@ function Quotes() {
     }, []);
 
     return (
-        <Fragment history={history}>
-            <Helmet>
-                <meta name="description" content="Skill Curves Quotes Corner"></meta>
-                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Quotes, Life, Finance, Money"></meta>
-            </Helmet>
+        <Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description" content="Skill Curves Quotes Corner"></meta>
+                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Quotes, Life, Finance, Money"></meta>
+                </Helmet>
+            </HelmetProvider>
             <a href="/">
                 <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
             </a>
             <div className="contentStart"></div>
-            <div className="quotelinks animate-bottom">
+            <div className="quotelinks animate-bottom" history={history}>
                 {
                     quotes ?
                         quotes.quotes.map(quote =>
@@ -52,9 +54,9 @@ function Quotes() {
                                         <div className="text">
                                             <i className="start-quote fas fa-quote-left"></i>
                                             <div>
-                                            <Link rel="preload" to={"/quote/" + quote.slug} key={quote.slug}>{quote.title}</Link>
-                                            <div className="quote">{quote.quote}</div>
-                                            <div className="credit">{new Date(quote.createdAt).toLocaleDateString(undefined, options)}</div>
+                                                <Link rel="preload" to={"/quote/" + quote.slug} key={quote.slug}>{quote.title}</Link>
+                                                <div className="quote">{quote.quote}</div>
+                                                <div className="credit">{new Date(quote.createdAt).toLocaleDateString(undefined, options)}</div>
                                             </div>
                                         </div>
                                     </div>

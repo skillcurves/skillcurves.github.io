@@ -1,7 +1,7 @@
 import React, { Fragment } /*, { useEffect } */ from 'react';
 // import { Link } from 'react-router-dom';
 import './Error.css';
-import Helmet from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
@@ -10,18 +10,20 @@ function Error() {
     let history = createBrowserHistory();
     ReactGA.initialize('UA-180316702-1');
     history.listen((location, action) => {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.pageview(location.pathname);
     });
 
     return (
-        <Fragment history={history}>
-            <Helmet>
-                <title>Skill Curves | Page not found</title>
-                <meta name="description" content="Skill Curves 404 Error Page"></meta>
-                <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Quotes, Stocks, Finance, Money"></meta>
-            </Helmet>
-            <div className="error">
+        <Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Skill Curves | Page not found</title>
+                    <meta name="description" content="Skill Curves 404 Error Page"></meta>
+                    <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Quotes, Stocks, Finance, Money"></meta>
+                </Helmet>
+            </HelmetProvider>
+            <div className="error" history={history}>
                 <a href="/">
                     <img src={require('../images/Yellow on Transparent Logo.png')} alt="Skill Curves Logo" width="45" height="auto" className="logo" />
                 </a>
