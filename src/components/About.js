@@ -18,7 +18,8 @@ function About() {
             <HelmetProvider>
                 <Helmet>
                     <title>Skill Curves | About Us </title>
-                    <meta name="description" content="About Skill Curves and Karthekeya Udupa"></meta>
+                    <meta name="description" content="Skill Curves is a passion project which aims to make best of the opportunities in financial market to 
+advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills. Know more about Skill Curves and Karthekeya Udupa"></meta>
                     <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, About Us, Blog, Finance, Stock Market"></meta>
                 </Helmet>
             </HelmetProvider>

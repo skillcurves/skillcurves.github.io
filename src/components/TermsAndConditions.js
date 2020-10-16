@@ -18,7 +18,8 @@ function TermsAndConditions() {
             <HelmetProvider>
                 <Helmet>
                     <title>Skill Curves | Terms and Conditions</title>
-                    <meta name="description" content="Skill Curves Terms and Conditions"></meta>
+                    <meta name="description" content="Skill Curves is a passion project which aims to make best of the opportunities in financial market to 
+advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills. Read Skill Curves Terms and Conditions"></meta>
                     <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Quotes, Stocks, Finance, Money"></meta>
                 </Helmet>
             </HelmetProvider>

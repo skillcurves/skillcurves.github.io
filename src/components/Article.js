@@ -41,9 +41,9 @@ function Article({ match, location }) {
         <Fragment>
             <HelmetProvider>
                 <Helmet>
-                    <title>Skill Curves | {articles !== null ? articles.articles[0].title : "Skill Curves Blog Article"} </title>
-                    <meta name="description" content={articles !== null ? articles.articles[0].description : "Skill Curves"}></meta>
-                    <meta name="robots" content={articles !== null ? articles.articles[0].metadataKeywords : "Skill Curves"}></meta>
+                    <title>Skill Curves | {articles !== null ? articles.articles.length>0? articles.articles[0].title : "Skill Curves Blog Article" : "Skill Curves Blog Article"} </title>
+                    <meta name="description" content={articles !== null ? articles.articles.length>0?  articles.articles[0].description : "Skill Curves is a passion project which aims to make best of the opportunities in financial market to advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills." : "Skill Curves is a passion project which aims to make best of the opportunities in financial market to advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills."}></meta>
+                    <meta name="robots" content={articles !== null ? articles.articles.length>0? articles.articles[0].metadataKeywords : "Skill Curves, Skillcurves, Karthekeya Udupa, Blog, Article" : "Skill Curves, Skillcurves, Karthekeya Udupa, Blog, Article"}></meta>
                 </Helmet>
             </HelmetProvider>
             <a href="/">

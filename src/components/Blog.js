@@ -34,7 +34,8 @@ function Blog() {
         <Fragment>
             <HelmetProvider>
                 <Helmet>
-                    <meta name="description" content="Skill Curves Blog Articles"></meta>
+                    <meta name="description" content="Skill Curves is a passion project which aims to make best of the opportunities in financial market to 
+advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills. Read Skill Curves Blog Articles"></meta>
                     <meta name="robots" content="Skillcurves, Skill Curves, Karthikeya Updupa, Blog, Article, Finance, Stock Market"></meta>
                 </Helmet>
             </HelmetProvider>

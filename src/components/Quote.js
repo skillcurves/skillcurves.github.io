@@ -41,9 +41,9 @@ function Quote({ match, location }) {
         <Fragment>
             <HelmetProvider>
                 <Helmet>
-                    <title>Skill Curves | {quotes !== null ? quotes.quotes[0].title : "Skill Curves Quote Corner"} </title>
-                    <meta name="description" content={quotes !== null ? quotes.quotes[0].description : "Skill Curves Quotes Corner"}></meta>
-                    <meta name="robots" content={quotes !== null ? quotes.quotes[0].metadataKeywords : "Skill Curves"}></meta>
+                    <title>Skill Curves | {quotes !== null ? quotes.quotes.length > 0 ? quotes.quotes[0].title : "Skill Curves Blog Article" : "Skill Curves Blog Article"} </title>
+                    <meta name="description" content={quotes !== null ? quotes.quotes.length > 0 ? quotes.quotes[0].description : "Skill Curves is a passion project which aims to make best of the opportunities in financial market to advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills." : "Skill Curves is a passion project which aims to make best of the opportunities in financial market to advance the cause of financial awareness for all. We are your one stop destination for all relevant financial skills."}></meta>
+                    <meta name="robots" content={quotes !== null ? quotes.quotes.length > 0 ? quotes.quotes[0].metadataKeywords : "Skill Curves, Skillcurves, Karthekeya Udupa, Blog, Article" : "Skill Curves, Skillcurves, Karthekeya Udupa, Blog, Article, Quote"}></meta>
                 </Helmet>
             </HelmetProvider>
             <a href="/">
