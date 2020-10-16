@@ -88,10 +88,12 @@ advance the cause of financial awareness for all. We are your one stop destinati
                 {
                     testimonials ?
                         testimonials.testimonials.map(testimonial =>
-                            <div key={testimonial.slug} className="mySlides">
-                                {/* <img alt={"Skillcurves "+ testimonial.authorName} src={testimonial.authorImageUrl} width="125" height="auto"/> */}
+                            <div key={testimonial.slug} className="mySlides">                                
                                 <q>{testimonial.testimonial}</q>
-                                <p className="testimonialAuthor">{testimonial.title}</p>
+                                <p className="testimonialAuthor">
+                                    {/* <img alt={"Skillcurves "+ testimonial.authorName} src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" className="authorImg"/>  */}
+                                    {testimonial.title}
+                                </p>
                             </div>
                         )
                         :
