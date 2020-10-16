@@ -4,6 +4,8 @@ import axios from 'axios';
 import { HelmetProvider , Helmet} from 'react-helmet-async';
 import './Banner.scss';
 
+import Testimonials from './Testimonials';
+
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
 
@@ -147,6 +149,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
+                <Testimonials/>
                 <div className="footer">
                     <Link to="/termsandconditions">Terms and Conditions</Link>
                     <span> | </span>
