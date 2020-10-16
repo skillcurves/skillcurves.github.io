@@ -53,7 +53,7 @@ advance the cause of financial awareness for all. We are your one stop destinati
                                 <div className="inner">
                                     <div className="box">
                                         <div className="text">
-                                            <i className="start-quote fas fa-quote-left"></i>
+                                            <i className="fa fa-quote-left fa-4"></i>
                                             <div>
                                                 <Link rel="preload" to={"/quote/" + quote.slug} key={quote.slug}>{quote.title}</Link>
                                                 <div className="quote">{quote.quote}</div>
