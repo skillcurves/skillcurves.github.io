@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.d22b6d1a.chunk.css",
-    "main.js": "/static/js/main.af828803.chunk.js",
-    "main.js.map": "/static/js/main.af828803.chunk.js.map",
+    "main.js": "/static/js/main.4d20ebbf.chunk.js",
+    "main.js.map": "/static/js/main.4d20ebbf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b9866fc9.js",
     "runtime-main.js.map": "/static/js/runtime-main.b9866fc9.js.map",
     "static/js/2.ea0b5290.chunk.js": "/static/js/2.ea0b5290.chunk.js",
     "static/js/2.ea0b5290.chunk.js.map": "/static/js/2.ea0b5290.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c243ef0cde2643dac916de98fa53b8f4.js": "/precache-manifest.c243ef0cde2643dac916de98fa53b8f4.js",
+    "precache-manifest.8a7d5b488250788e419eec6e3d1d5583.js": "/precache-manifest.8a7d5b488250788e419eec6e3d1d5583.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.d22b6d1a.chunk.css.map": "/static/css/main.d22b6d1a.chunk.css.map",
     "static/js/2.ea0b5290.chunk.js.LICENSE.txt": "/static/js/2.ea0b5290.chunk.js.LICENSE.txt",
-    "static/media/SkillCurvesStandards.png": "/static/media/SkillCurvesStandards.929b466f.png",
+    "static/media/SkillCurvesStandards-v2.png": "/static/media/SkillCurvesStandards-v2.ca8ae857.png",
     "static/media/Yellow on Transparent Logo.png": "/static/media/Yellow on Transparent Logo.4661c382.png",
     "static/media/author.png": "/static/media/author.e52be6c8.png",
     "static/media/Banner.scss": "/static/media/logo512.7b8644ff.png"
@@ -21,6 +21,6 @@
     "static/js/runtime-main.b9866fc9.js",
     "static/js/2.ea0b5290.chunk.js",
     "static/css/main.d22b6d1a.chunk.css",
-    "static/js/main.af828803.chunk.js"
+    "static/js/main.4d20ebbf.chunk.js"
   ]
 }
