@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b389361e07fa17442ed69b42ded5b17",
+    "revision": "96d3fc7fd2aa0964c1f54897162ea566",
     "url": "/index.html"
   },
   {
-    "revision": "61ae876e5ca479ff528e",
+    "revision": "357e5f2ba187ea9a0435",
     "url": "/static/css/main.d22b6d1a.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.ea0b5290.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "61ae876e5ca479ff528e",
-    "url": "/static/js/main.4d20ebbf.chunk.js"
+    "revision": "357e5f2ba187ea9a0435",
+    "url": "/static/js/main.c1ab043a.chunk.js"
   },
   {
     "revision": "819a3dc51a9abfe40723",
     "url": "/static/js/runtime-main.b9866fc9.js"
   },
   {
-    "revision": "ca8ae85786dc956bef6ba4910d220d00",
-    "url": "/static/media/SkillCurvesStandards-v2.ca8ae857.png"
+    "revision": "d864153c6b416f5d7e3acf4c98030fd6",
+    "url": "/static/media/SkillCurvesStandards-v3.d864153c.png"
   },
   {
     "revision": "4661c3823073c2c98844000605a199e9",
