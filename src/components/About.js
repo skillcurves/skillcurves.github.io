@@ -29,7 +29,7 @@ advance the cause of financial awareness for all. We are your one stop destinati
             <div className="contentStart"></div>
             <div className="aboutUs" history={history}>
                 <div>
-                    <img src={require('../images/author.png')} alt="Skill Curves Founder" width="125" height="auto" />
+                    <img src="authors/author.png" alt="Skill Curves Founder" width="125" height="auto" />
                     <br />
                     <span className="founder">Karthikeya Udupa, Founder</span>
                 </div>
