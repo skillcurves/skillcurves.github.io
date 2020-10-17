@@ -7,6 +7,7 @@ import Quotes from './components/Quotes';
 import Contact from './components/Contact';
 import Article from './components/Article';
 import Quote from './components/Quote';
+import Gallery from './components/Gallery';
 import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Error from './components/Error';
@@ -22,6 +23,7 @@ class App extends Component {
       about: false,
       blog: false,
       quotes: false,
+      gallery: false,
       contact: false
     }
   }  
@@ -47,6 +49,7 @@ class App extends Component {
             about: false,
             blog: false,
             quotes: false,
+            gallery: false,
             contact: false
           });
           break;
@@ -56,6 +59,7 @@ class App extends Component {
             about: true,
             blog: false,
             quotes: false,
+            gallery: false,
             contact: false
           });
           break;
@@ -65,6 +69,7 @@ class App extends Component {
             about: false,
             blog: true,
             quotes: false,
+            gallery: false,
             contact: false
           });
           break;
@@ -74,6 +79,7 @@ class App extends Component {
             about: false,
             blog: false,
             quotes: true,
+            gallery: false,
             contact: false
           });
           break;
@@ -83,15 +89,27 @@ class App extends Component {
             about: false,
             blog: false,
             quotes: false,
+            gallery: false,
             contact: true
           });
           break;
+          case 'gallery':
+            this.setState({
+              home: false,
+              about: false,
+              blog: false,
+              quotes: false,
+              gallery: true,
+              contact: false
+            });
+            break;
         default:
           this.setState({
             home: true,
             about: false,
             blog: false,
             quotes: false,
+            gallery: false,
             contact: false
           });
           break;
@@ -121,6 +139,11 @@ class App extends Component {
               onClick={activeClass}
               id="quotes">
               <Link to="/quotes">Quotes Corner</Link>
+            </span>
+            <span className={"nav".concat(" ").concat(this.state.gallery ? "active" : null)}
+              onClick={activeClass}
+              id="gallery">
+              <Link to="/gallery">Image Gallery</Link>
             </span>
             <span className={"nav".concat(" ").concat(this.state.contact ? "active" : null)}
               onClick={activeClass}
@@ -153,6 +176,7 @@ class App extends Component {
           <Route path={"/blog"} component={Blog} />
           <Route path={"/quotes"} component={Quotes} />
           <Route path={"/contact"} component={Contact} />
+          <Route path={"/gallery"} component={Gallery} />
           <Route path={"/termsandconditions"} component={TermsAndConditions} />
           <Route path={"/privacypolicy"} component={PrivacyPolicy} />
           <Route exact path={"/error"} component={Error} />
