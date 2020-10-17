@@ -54,7 +54,7 @@ advance the cause of financial awareness for all. We are your one stop destinati
                 </p>
             </div>
             <div className="our-standards">
-                <img src={require('../images/SkillCurvesStandards.png')} alt="SkillCurves Standards"/>
+                <img src={require('../images/SkillCurvesStandards-v2.png')} alt="SkillCurves Standards"/>
             </div>
             {/* <div className="footer">
                 <Link to="/termsandconditions">Terms and Conditions</Link>
