@@ -88,6 +88,7 @@ advance the cause of financial awareness for all. We are your one stop destinati
                             <p>Shamya Prasa Building, Kinnigoli, Mangalore, 574150</p>
                             <p><strong>Ph:</strong> 8867316744</p>
                             <p><strong>Email:</strong> contact@skillcurves.com</p>
+                            <p><strong>Alternate Email:</strong> skill.curves@gmail.com</p>
                         </div>
                     </div>
                     <div className="column">
