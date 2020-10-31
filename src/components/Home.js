@@ -29,7 +29,7 @@ class Home extends Component {
             text: null,
             bold: null
         };
-    }
+    }    
 
     componentDidMount() {
         this.RandomBackground();
@@ -47,7 +47,7 @@ class Home extends Component {
             text: this.state.colors[RandomID].text,
             bold: this.state.colors[RandomID].bold
         })
-    }
+    }    
 
     render() {
         let history = createBrowserHistory();
@@ -55,7 +55,7 @@ class Home extends Component {
         history.listen((location, action) => {
             ReactGA.set({ page: location.pathname });
             ReactGA.pageview(location.pathname);
-        });
+        });       
 
         let sectionStyle = {
             backgroundColor: this.state.background,
@@ -136,7 +136,7 @@ class Home extends Component {
                             <label htmlFor="email">
                                 Never miss what really matters in Stock Market. Stay informed by subscribing to our free weekly
                                 newsletter which covers short summary of the week, technical &amp; derivative view, week ahead in a
-                                short and plain language.
+                                short and plain language. <a href="https://drive.google.com/file/d/1zIRbWmidMz-452-_Hmf6fQnLt7SnuO8J/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read a sample newsletter</a>
                             </label>
                             <div className="newsletterFields">
                                 <input type="email" placeholder="Enter Your Email Here" name="subscriber" id="subscriber" />
